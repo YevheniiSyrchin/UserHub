@@ -1,0 +1,138 @@
+@media (max-width: 1920px) {
+  .container {
+    padding: 80px 80px 40px;
+  }
+  .todos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1400px) {
+  .container {
+    padding: 60px 60px 30px;
+  }
+  .detailedInformation {
+    @include flex(column-reverse, center, start);
+  }
+  .mainInfo {
+    padding: 10px 0 0 40px;
+  }
+  .additionalInfo {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .navContainer {
+    margin: 0 0 40px;
+  }
+  .usersContainer {
+    @include flex(column, center, start);
+  }
+  .postsContainer {
+    @include flex(column-reverse, center, center);
+    .form {
+      margin-bottom: 20px;
+    }
+    .posts {
+      margin: 0;
+    }
+  }
+  .users {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+  }
+  .userItem {
+    width: 235px;
+  }
+  .mainInfo {
+    padding: 110px 0 0;
+  }
+  .additionalInfo {
+    padding-left: 20px;
+  }
+  .detailedInformation {
+    @include flex(row, center, center);
+  }
+  .todos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    margin: 30px auto;
+    padding: 60px 40px 20px;
+  }
+  .navContainer {
+    margin-bottom: 20px;
+    .button {
+      margin: 4px;
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
+  .addForm {
+    min-width: 360px;
+    .formItem {
+      @include flex(column, center, center);
+
+      input,
+      textarea,
+      select {
+        width: 300px;
+      }
+    }
+  }
+  .outlet {
+    .detailedInformation {
+      @include flex(column, center, start);
+      .mainInfo {
+        padding: 0;
+        margin-bottom: 20px;
+      }
+      .additionalInfo {
+        padding: 0;
+      }
+    }
+  }
+  .userItem {
+    width: 170px;
+    padding: 6px;
+    font-size: 14px;
+    border-radius: 30px;
+  }
+  .todoNav {
+    @include flex(column, center, center);
+    .searchInput {
+      margin: 10px 0;
+    }
+    .pagination {
+      margin: 10px 0;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 40px 10px 10px;
+  }
+  .navContainer {
+    @include flex(column, center, center);
+    .navigation {
+      margin: 20px 0;
+    }
+  }
+  .header {
+    padding: 0 40px;
+  }
+  .userItem {
+    width: 120px;
+    padding: 6px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+  .addForm {
+    min-width: 280px;
+  }
+}

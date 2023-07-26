@@ -1,0 +1,11 @@
+.container {
+  max-width: 95%;
+  min-height: 90vh;
+  margin: 60px auto;
+  padding: 80px 120px 40px;
+  background-color: white;
+  border-radius: 30px;
+}
+.toCenter {
+  @include flex(row, center, center);
+}

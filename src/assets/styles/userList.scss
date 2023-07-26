@@ -1,0 +1,81 @@
+.usersContainer {
+  @include flex(row, space-around, start);
+}
+.usersList {
+  @include flex(column, center, center);
+  width: 100%;
+  height: 100%;
+}
+.users {
+  margin: 20px auto 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.userItem {
+  @include flex(column, center, center);
+  text-align: center;
+  padding: 10px;
+  background-color: $light-gray;
+  color: $black;
+  border: none;
+  border-radius: 14px;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.userItem:hover {
+  color: white;
+  background-color: $brown;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+.outlet {
+  @include flex(column, center, center);
+  width: 100%;
+  height: 100%;
+
+  .detailedInformation {
+    @include flex(row, center, start);
+  }
+
+  .mainInfo {
+    @include flex(column, start, start);
+    padding-top: 110px;
+    flex: 1;
+  }
+
+  .additionalInfo {
+    @include flex(column, center, center);
+    flex: 1;
+
+    .Buttons {
+      @include flex(row, space-around, center);
+      flex: 1;
+
+      .button {
+        width: 100%;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: $light-gray;
+        color: $black;
+      }
+      .button:hover {
+        color: white;
+        background-color: $brown;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .Tabs {
+      flex: 3;
+      h3 {
+        font-size: 32px;
+        text-align: center;
+      }
+      li {
+        margin-bottom: 6px;
+      }
+    }
+  }
+}

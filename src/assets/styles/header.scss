@@ -1,0 +1,10 @@
+.header {
+  @include flex(row, center, center);
+  font-size: 28px;
+  margin: 5px auto;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 8px;
+  color: $black;
+  text-align: center;
+}

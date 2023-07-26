@@ -1,0 +1,75 @@
+.postsContainer {
+  @include flex(row-reverse, center, start);
+  margin: auto;
+  .posts {
+    flex: 3;
+    margin-left: 40px;
+    padding: 20px 40px;
+    background-color: #f6f6f6;
+    border-radius: 30px;
+  }
+  .form {
+    flex: 1;
+    padding: 20px;
+    background-color: #f6f6f6;
+    border-radius: 30px;
+  }
+}
+.postItem {
+  margin: 0 0 26px;
+}
+.addForm {
+  @include flex(column, center, center);
+  padding-top: 20px;
+  min-width: 500px;
+
+  .formItem {
+    @include flex(row, center, center);
+    width: 100%;
+    margin: auto;
+    margin: 0 0 10px;
+
+    .inputContainer {
+      flex: 2;
+      display: block;
+    }
+
+    .errorMessage {
+      display: block;
+    }
+
+    label {
+      flex: 1;
+      text-align: left;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    textarea {
+      min-height: 60px;
+      resize: vertical;
+    }
+  }
+  .formButton {
+    display: inline-block;
+    padding: 10px;
+    background-color: $dark-brown;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 28px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+  }
+  .formButton:hover {
+    background-color: $blue;
+  }
+}
